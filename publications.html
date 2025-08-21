@@ -1,177 +1,160 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Suraj Mandal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suraj Mandal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f9fafc;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #1565c0, #6a1b9a);
+    }
+
+    .navbar-brand,
+    .nav-link,
+    .navbar-text {
+      color: #fff !important;
+    }
+
+    /* Profile card */
+    .profile-card {
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-card img {
+      border-radius: 50%;
+      width: 150px;
+      margin: 15px auto;
+      display: block;
+    }
+
+    /* Sidebar links */
+    .list-group-item {
+      transition: background 0.2s ease;
+      border: none;
+    }
+
+    .list-group-item:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Section title */
+    .section-title {
+      font-weight: 600;
+      color: #1565c0;
+      margin-bottom: 15px;
+    }
+
+    /* Publications lists */
+    .pub-list a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .pub-list .list-group-item {
+      border-radius: 8px;
+      margin: 4px;
+      background: #eef4ff;
+      border: 1px solid #d6e2ff;
+    }
+
+    .pub-list .list-group-item:hover {
+      background: #dbe6ff;
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Suraj Mandal</a>
-
-            <span class="navbar-text">
-                Ph.D. scholar (PMRF) at IIT Kanpur
-            </span>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="PDF/suraj_resume.pdf">Resume</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="publications.html">Publications</a>
-                    </li> -->
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="publications.html">Publications</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="experience.html">Teaching</a>
-                    </li>
-		    <li class="nav-item">
-                        <a class="nav-link" href="responsebilities.html">Awards and Responsibilities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-
-
-
-
-                    <!-- <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <br><br>
-
-
-        <div class="container">
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-
-                <!-- Info and social links -->
-                <div class="card">
-                    <img src="images/prof_pic.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <b>Room No.</b>
-                            <br>
-                            C3iHUB 1st Floor(H1), IIT Kanpur
-                            <hr>
-                            <b>Email</b>
-                            <br>
-                            <a href="mailto:surajm22@iitk.ac.in">surajm22@iitk.ac.in</a>
-                            <br>
-                            <a href="mailto:surajmandal@cse.iitk.ac.in">surajmandal@cse.iitk.ac.in</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="list-group">
-                    <a href="https://github.com/srm1071" target="_blank"
-                        class="list-group-item list-group-item-action list-group-item-light">
-                        <img src="images/logos/github-mark.png" height="25" width="25">
-                        &nbsp <b>GitHub</b>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ" target="_blank"
-                        class="list-group-item list-group-item-action list-group-item-light">
-                        <img src="images/logos/google-scholar-icon.png" height="25" width="25">
-                        &nbsp <b>Google Scholar</b>
-                    </a>
-                    <a href="https://www.linkedin.com/in/suraj-mandal-377021128/" target="_blank"
-                        class="list-group-item list-group-item-action list-group-item-light">
-                        <img src="images/logos/LI-In-Bug.png" height="25" width="28">
-                        &nbsp <b>Linkedin</b>
-                    </a>
-                    <a href="" target="_blank"
-                        class="list-group-item list-group-item-action list-group-item-light">
-                        <img src="images/logos/Twitterlogo-blue.png" height="25" width="28">
-                        &nbsp <b>Twitter</b>
-                    </a>
-                </div>
-
-                <br>
-
-                <!-- Goto -->
-                <!-- <div class="list-group list-group-flush">
-                    <a href="#about" class="list-group-item">
-                        <b>About</b>
-                    </a>
-                    <a href="#conferencepublication" class="list-group-item">
-                        <b>Conference Publications</b>
-
-                    </a>
-                    <a href="#teaching" class="list-group-item">
-                        <b>Teaching</b>
-                    </a>
-                    <a href="#contact" class="list-group-item">
-                        <b>Contact Details</b>
-                    </a>
-                </div> -->
-
-            </div>
-
-
-            <!-- Details -->
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
-
-
-
-                <div>
-                    <p class="lead">
-                    <p class="h3">Publications</p>
-			<p>I have publications in the following conferences:
-				<ul class="list-group list-group-horizontal">
-				  <li class="list-group-item"><a href="https://acm-qsec.com/" style="text-decoration:none;">ACM-QSec</a></li>
-				  <li class="list-group-item"> <a href="https://ieeexplore.ieee.org/xpl/conhome/9083732/proceeding" style="text-decoration:none;">IEEE SOCC</a></li>
-				  <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/conhome/10409268/proceeding" style="text-decoration:none;">ASIANHOST</a></li>
-				  <li class="list-group-item"><a href="https://dl.acm.org/doi/proceedings/10.1145/3649476" style="text-decoration:none;">GLSVLSI</a></li>
-				  <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/conhome/10483275/proceeding" style="text-decoration:none;">VLSID</a></li>
-				</ul>
-			</p>
-			<p>I have publications in the following journals:
-				<ul class="list-group list-group-horizontal-sm">
-				  <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919" style="text-decoration:none;">IEEE TCAS-I</a></li>
-				  <li class="list-group-item"><a href="https://dl.acm.org/journal/TODAES" style="text-decoration:none;">ACM TODAES</a></li>
-				</ul>
-			</p>
-			Please refer to my <a href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ&hl=en">google scholar</a> profile for Published Works. Recent accepted publications are shown in News and Updates.
-
-                    <hr>
-                    <hr>
-
-
-                </div>
-
-
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Suraj Mandal</a>
+      <span class="navbar-text ms-3">Ph.D. Scholar (PMRF) at IIT Kanpur</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="PDF/suraj_resume.pdf">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="responsebilities.html">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
+  <br><br>
 
+  <div class="container">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <div class="col-lg-3">
+        <div class="card profile-card p-3">
+          <img src="images/prof_pic.png" alt="Profile Picture">
+          <div class="card-body text-center">
+            <p class="mb-1"><b>Room No.</b><br>C3iHUB 1st Floor(H1), IIT Kanpur</p>
+            <hr>
+            <p class="mb-1"><b>Email</b></p>
+            <a href="mailto:surajm22@iitk.ac.in">surajm22@iitk.ac.in</a><br>
+            <a href="mailto:surajmandal@cse.iitk.ac.in">surajmandal@cse.iitk.ac.in</a>
+          </div>
+        </div>
 
+        <div class="list-group mt-4">
+          <a href="https://github.com/srm1071" target="_blank" class="list-group-item list-group-item-action">
+            <img src="images/logos/github-mark.png" height="22"> &nbsp;<b>GitHub</b>
+          </a>
+          <a href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ" target="_blank"
+            class="list-group-item list-group-item-action">
+            <img src="images/logos/google-scholar-icon.png" height="22"> &nbsp;<b>Google Scholar</b>
+          </a>
+          <a href="https://www.linkedin.com/in/suraj-mandal-377021128/" target="_blank"
+            class="list-group-item list-group-item-action">
+            <img src="images/logos/LI-In-Bug.png" height="22"> &nbsp;<b>LinkedIn</b>
+          </a>
+          <a href="#" target="_blank" class="list-group-item list-group-item-action">
+            <img src="images/logos/Twitterlogo-blue.png" height="22"> &nbsp;<b>Twitter</b>
+          </a>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+      <!-- Main Content -->
+      <div class="col-lg-9">
+        <h3 class="section-title">Publications</h3>
+        <p>I have publications in the following conferences:</p>
+        <ul class="list-group list-group-horizontal flex-wrap pub-list">
+          <li class="list-group-item"><a href="https://acm-qsec.com/">ACM-QSec</a></li>
+          <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/conhome/9083732/proceeding">IEEE SOCC</a></li>
+          <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/conhome/10409268/proceeding">ASIANHOST</a></li>
+          <li class="list-group-item"><a href="https://dl.acm.org/doi/proceedings/10.1145/3649476">GLSVLSI</a></li>
+          <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/conhome/10483275/proceeding">VLSID</a></li>
+        </ul>
+
+        <p class="mt-4">I have publications in the following journals:</p>
+        <ul class="list-group list-group-horizontal flex-wrap pub-list">
+          <li class="list-group-item"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919">IEEE TCAS-I</a></li>
+          <li class="list-group-item"><a href="https://dl.acm.org/journal/TODAES">ACM TODAES</a></li>
+        </ul>
+
+        <p class="mt-4">Please refer to my <a
+            href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ&hl=en">Google Scholar</a> profile for the full
+          list of published works. Recent accepted publications are shown in <b>News and Updates</b>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
