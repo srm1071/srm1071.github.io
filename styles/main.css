@@ -1,1 +1,81 @@
 
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  color: #b22222;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #444 !important;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+}
+
+/* Sidebar */
+.profile-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.profile-card img {
+  border-radius: 8px 8px 0 0;
+}
+
+.profile-card .card-body {
+  font-size: 0.9rem;
+}
+
+.list-group-item {
+  border: none;
+  padding-left: 0;
+}
+
+/* Main Sections */
+.content-section {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+li {
+  margin-bottom: 6px;
+}
