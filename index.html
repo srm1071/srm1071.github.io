@@ -2,101 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Suraj Mandal</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+<title>Suraj Mandal</title>
 
-    <!-- Bootstrap Icons -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        rel="stylesheet">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
 
-    <!-- Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+rel="stylesheet">
 
-    <link href="styles/main.css" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+<link href="styles/main.css"
+      rel="stylesheet">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+.section-anchor{
+padding-top:90px;
+margin-top:-90px;
+}
+
+.content-section{
+margin-bottom:45px;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
 
-    <div class="container">
+<div class="container">
 
-        <a class="navbar-brand"
-           href="index.html">
+<a class="navbar-brand fw-bold"
+href="#about">
 
-            Suraj Mandal
+Suraj Mandal
 
-        </a>
+</a>
 
-        <span class="navbar-text d-none d-lg-inline">
+<span class="navbar-text d-none d-lg-inline">
 
-            Ph.D. Scholar (PMRF) · IIT Kanpur
+Ph.D. Scholar (PMRF) · IIT Kanpur
 
-        </span>
+</span>
 
-        <div class="collapse navbar-collapse">
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
 
-            <ul class="navbar-nav ms-auto">
+<span class="navbar-toggler-icon">
+</span>
 
-                <li class="nav-item">
-                    <a class="nav-link active"
-                       href="index.html">
-                        About
-                    </a>
-                </li>
+</button>
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="PDF/suraj_resume.pdf">
-                        Resume
-                    </a>
-                </li>
+<div
+class="collapse navbar-collapse"
+id="navbarNav">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="publications.html">
-                        Publications
-                    </a>
-                </li>
+<ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="experience.html">
-                        Teaching
-                    </a>
-                </li>
+<li class="nav-item">
+<a class="nav-link"
+href="#about">
+About
+</a>
+</li>
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="responsebilities.html">
-                        Awards & Responsibilities
-                    </a>
-                </li>
+<li class="nav-item">
+<a class="nav-link"
+href="PDF/suraj_resume.pdf"
+target="_blank">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="contact.html">
-                        Contact
-                    </a>
-                </li>
+Resume
 
-            </ul>
+</a>
+</li>
 
-        </div>
+<li class="nav-item">
+<a class="nav-link"
+href="#publications">
 
-    </div>
+Publications
+
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link"
+href="#teaching">
+
+Teaching
+
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link"
+href="#awards">
+
+Awards
+
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link"
+href="#contact">
+
+Contact
+
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </nav>
 
@@ -105,27 +146,34 @@
 
 <div class="row g-4">
 
+
 <!-- Sidebar -->
 
 <div class="col-lg-3">
 
-<div class="card profile-card shadow-sm border-0">
+<div class="card shadow-sm border-0">
 
-<img src="images/prof_pic.png"
-     class="card-img-top"
-     alt="Suraj Mandal">
-
+<img
+src="images/prof_pic.png"
+class="card-img-top"
+alt="Suraj Mandal">
 
 <div class="card-body">
 
-<h5 class="mb-1">
+<h5>
+
 Suraj Mandal
+
 </h5>
 
-<p class="text-muted small mb-3">
+<p class="text-muted small">
+
 Ph.D. Scholar (PMRF)<br>
+
 Department of CSE<br>
+
 IIT Kanpur
+
 </p>
 
 <hr>
@@ -134,11 +182,11 @@ IIT Kanpur
 
 <i class="bi bi-geo-alt"></i>
 
-<strong>Office</strong><br>
-
 KD-316<br>
 
 H.R. Kadim Diwan Building<br>
+
+Dept. of CSE<br>
 
 IIT Kanpur
 
@@ -150,16 +198,20 @@ IIT Kanpur
 
 <i class="bi bi-envelope"></i>
 
-<strong>Email</strong><br>
+<br>
 
 <a href="mailto:surajm22@iitk.ac.in">
+
 surajm22@iitk.ac.in
+
 </a>
 
 <br>
 
 <a href="mailto:surajmandal@cse.iitk.ac.in">
+
 surajmandal@cse.iitk.ac.in
+
 </a>
 
 </p>
@@ -168,9 +220,21 @@ surajmandal@cse.iitk.ac.in
 
 <div class="d-grid gap-2">
 
-<a class="btn btn-outline-dark btn-sm"
-   href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ"
-   target="_blank">
+<a
+class="btn btn-outline-dark btn-sm"
+href="https://github.com/srm1071"
+target="_blank">
+
+<i class="bi bi-github"></i>
+
+GitHub
+
+</a>
+
+<a
+class="btn btn-outline-secondary btn-sm"
+href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ"
+target="_blank">
 
 <i class="bi bi-mortarboard"></i>
 
@@ -178,9 +242,10 @@ Google Scholar
 
 </a>
 
-<a class="btn btn-outline-primary btn-sm"
-   href="https://www.linkedin.com/in/suraj-mandal-377021128/"
-   target="_blank">
+<a
+class="btn btn-outline-primary btn-sm"
+href="https://www.linkedin.com/in/suraj-mandal-377021128/"
+target="_blank">
 
 <i class="bi bi-linkedin"></i>
 
@@ -201,9 +266,12 @@ LinkedIn
 
 <div class="col-lg-9">
 
-<div class="content-section">
 
-<h3 class="section-title">
+<div
+class="content-section section-anchor"
+id="about">
+
+<h3>
 
 About
 
@@ -212,26 +280,13 @@ About
 <p>
 
 I am currently pursuing my Ph.D.
-from the Department of Computer
-Science & Engineering at the
+from the Department of Computer Science
+and Engineering at IIT Kanpur.
 
-<a href="https://www.iitk.ac.in/"
-target="_blank">
+I work under the guidance of
+Dr. Debapriya Basu Roy.
 
-Indian Institute of Technology Kanpur
-
-</a>.
-
-I am working under the guidance of
-
-<a href="https://dbroy24.wixsite.com/research"
-target="_blank">
-
-Dr. Debapriya Basu Roy
-
-</a>.
-
-My research area includes
+My research focuses on
 Hardware Accelerator Design
 and Hardware Security.
 
@@ -239,78 +294,278 @@ and Hardware Security.
 
 <p>
 
-During my Ph.D., I work on
-hardware implementation and
-acceleration of Post-Quantum
-Cryptographic algorithms.
+My work includes hardware
+implementation and acceleration
+of Post Quantum Cryptographic
+algorithms.
 
-My work also includes
-Physically Unclonable Functions (PUFs)
-and hardware security protocols.
+I have also worked on
+Physically Unclonable Functions
+(PUFs) and hardware security.
 
 </p>
 
 <p>
 
-I completed my M.Tech in
-Computer Science & Engineering from
+I completed my M.Tech
+from University of Kalyani.
 
-<a href="https://klyuniv.ac.in/"
-target="_blank">
-
-University of Kalyani
-
-</a>.
-
-My thesis was supervised by
-
-<a href="https://www.anirbanm.in/"
-target="_blank">
-
+My M.Tech thesis was supervised by
 Dr. Anirban Mukhopadhyay
-
-</a>
-
 and
-
-<a href="https://sujoy2611.wixsite.com/sujoy"
-target="_blank">
-
-Dr. Sujoy Chatterjee
-
-</a>.
+Dr. Sujoy Chatterjee.
 
 </p>
 
 <p>
 
-I also worked as a JRF at
-
-<a href="https://nitdgp.ac.in/"
-target="_blank">
-
-NIT Durgapur
-
-</a>
-
-on secure lightweight FPGA
-architectures under
-
-<a href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/bibhash-sen"
-target="_blank">
-
-Dr. Bibhash Sen
-
-</a>.
+I worked as a JRF at
+NIT Durgapur on FPGA
+security architecture research.
 
 </p>
 
 </div>
 
 
-<div class="content-section">
+<div
+class="content-section section-anchor"
+id="publications">
 
-<h3 class="section-title">
+<h3>
+
+Publications
+
+</h3>
+
+<h5>
+
+Conferences
+
+</h5>
+
+<ul>
+
+<li>ISVLSI</li>
+
+<li>ACM QSec</li>
+
+<li>IEEE SOCC</li>
+
+<li>ASIANHOST</li>
+
+<li>GLSVLSI</li>
+
+<li>VLSID</li>
+
+</ul>
+
+<h5>
+
+Journals
+
+</h5>
+
+<ul>
+
+<li>IEEE TCAS-I</li>
+
+<li>ACM TODAES</li>
+
+<li>IEEE Transactions on Consumer Electronics</li>
+
+</ul>
+
+</div>
+
+
+<div
+class="content-section section-anchor"
+id="teaching">
+
+<h3>
+
+Teaching
+
+</h3>
+
+<h5>
+
+Instructor
+
+</h5>
+
+<ul>
+
+<li>
+
+Conceptual Modelling of Hardware Systems Using Verilog
+
+</li>
+
+<li>
+
+Advanced DBMS
+
+</li>
+
+<li>
+
+Graph Theory
+
+</li>
+
+</ul>
+
+<h5>
+
+Teaching Assistant
+
+</h5>
+
+<ul>
+
+<li>
+
+CS666 — Hardware Security for IoT
+
+</li>
+
+<li>
+
+CS674A — Post Quantum Security
+
+</li>
+
+<li>
+
+CS220 — Computer Organisation
+
+</li>
+
+<li>
+
+CS981 — Advanced Topics in Cryptography
+
+</li>
+
+<li>
+
+CS984 — Introduction to Hardware Security
+
+</li>
+
+</ul>
+
+</div>
+
+
+<div
+class="content-section section-anchor"
+id="awards">
+
+<h3>
+
+Awards & Responsibilities
+
+</h3>
+
+<h5>
+
+Awards
+
+</h5>
+
+<ul>
+
+<li>
+
+C3i-HUB Fellowship
+
+</li>
+
+<li>
+
+Prime Minister Research Fellowship (PMRF)
+
+</li>
+
+</ul>
+
+<h5>
+
+Responsibilities
+
+</h5>
+
+<ul>
+
+<li>
+
+Reviewer:
+IEEE TCAS-I,
+IEEE TCAS-II
+
+</li>
+
+<li>
+
+Workshop Organizer:
+SPACE 2024
+
+</li>
+
+<li>
+
+Student Lead:
+CSAW India
+
+</li>
+
+</ul>
+
+</div>
+
+
+<div
+class="content-section section-anchor"
+id="contact">
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+Email:
+
+<br>
+
+<a href="mailto:surajm22@iitk.ac.in">
+
+surajm22@iitk.ac.in
+
+</a>
+
+<br>
+
+<a href="mailto:surajmandal@cse.iitk.ac.in">
+
+surajmandal@cse.iitk.ac.in
+
+</a>
+
+</p>
+
+</div>
+
+
+<div
+class="content-section">
+
+<h3>
 
 News & Activities
 
@@ -319,19 +574,29 @@ News & Activities
 <ul>
 
 <li>
-New paper accepted at ISVLSI 2026.
+
+New paper accepted at ISVLSI 2026
+
 </li>
 
 <li>
-Work accepted at PhD Forum in DATE 2026.
+
+PhD Forum accepted at DATE 2026
+
 </li>
 
 <li>
-New paper accepted at IEEE Transactions on Consumer Electronics.
+
+New paper accepted at
+IEEE Transactions on Consumer Electronics
+
 </li>
 
 <li>
-Visiting Research Scholar at NTU Singapore.
+
+Visiting Research Scholar
+at NTU Singapore
+
 </li>
 
 </ul>
@@ -343,6 +608,10 @@ Visiting Research Scholar at NTU Singapore.
 </div>
 
 </div>
+
+<script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 
