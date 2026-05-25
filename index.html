@@ -2,296 +2,143 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <title>Suraj Mandal</title>
 
-<meta charset="utf-8">
-<title>Suraj Mandal</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
 
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-rel="stylesheet">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-rel="stylesheet">
-
-<link
-href="styles/main.css"
-rel="stylesheet">
-
-<style>
-
-body{
-
-font-family:'Inter',sans-serif;
-
-background:#f5f7fb;
-
-}
-
-.navbar{
-
-background:white;
-
-box-shadow:
-0 2px 12px rgba(0,0,0,.05);
-
-}
-
-.profile-card{
-
-border:none;
-
-border-radius:18px;
-
-overflow:hidden;
-
-box-shadow:
-0 6px 22px rgba(0,0,0,.08);
-
-position:sticky;
-
-top:90px;
-
-}
-
-.content-card{
-
-background:white;
-
-padding:35px;
-
-border-radius:18px;
-
-box-shadow:
-0 6px 22px rgba(0,0,0,.06);
-
-min-height:700px;
-
-}
-
-.tab-btn{
-
-font-weight:500;
-
-border-radius:10px;
-
-}
-
-.tab-content{
-
-padding-top:15px;
-
-}
-
-.section-title{
-
-font-weight:700;
-
-margin-bottom:25px;
-
-}
-
-.news-box{
-
-background:#f8fafc;
-
-padding:20px;
-
-border-radius:12px;
-
-margin-top:30px;
-
-}
-
-.profile-links a{
-
-margin-bottom:10px;
-
-}
-
-</style>
+    <link href="styles/main.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+<nav class="navbar navbar-expand-lg">
 
-<nav
-class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
 
-<div class="container">
+        <a class="navbar-brand"
+           href="index.html">
 
-<a
-class="navbar-brand fw-bold">
+            Suraj Mandal
 
-Suraj Mandal
+        </a>
 
-</a>
+        <span class="navbar-text d-none d-lg-inline">
 
-<span
-class="navbar-text d-none d-lg-inline">
+            Ph.D. Scholar (PMRF) · IIT Kanpur
 
-Ph.D. Scholar (PMRF) · IIT Kanpur
+        </span>
 
-</span>
+        <div class="collapse navbar-collapse">
 
+            <ul class="navbar-nav ms-auto">
 
-<div
-class="ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="index.html">
+                        About
+                    </a>
+                </li>
 
-<ul
-class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="PDF/suraj_resume.pdf">
+                        Resume
+                    </a>
+                </li>
 
-<li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="publications.html">
+                        Publications
+                    </a>
+                </li>
 
-<button
-class="nav-link active tab-btn"
-data-bs-toggle="pill"
-data-bs-target="#about">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="experience.html">
+                        Teaching
+                    </a>
+                </li>
 
-About
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="responsebilities.html">
+                        Awards & Responsibilities
+                    </a>
+                </li>
 
-</button>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="contact.html">
+                        Contact
+                    </a>
+                </li>
 
-</li>
+            </ul>
 
-<li>
+        </div>
 
-<a
-class="nav-link tab-btn"
-href="PDF/suraj_resume.pdf"
-target="_blank">
-
-Resume
-
-</a>
-
-</li>
-
-<li>
-
-<button
-class="nav-link tab-btn"
-data-bs-toggle="pill"
-data-bs-target="#publications">
-
-Publications
-
-</button>
-
-</li>
-
-<li>
-
-<button
-class="nav-link tab-btn"
-data-bs-toggle="pill"
-data-bs-target="#teaching">
-
-Teaching
-
-</button>
-
-</li>
-
-<li>
-
-<button
-class="nav-link tab-btn"
-data-bs-toggle="pill"
-data-bs-target="#awards">
-
-Awards
-
-</button>
-
-</li>
-
-<li>
-
-<button
-class="nav-link tab-btn"
-data-bs-toggle="pill"
-data-bs-target="#contact">
-
-Contact
-
-</button>
-
-</li>
-
-</ul>
-
-</div>
-
-</div>
+    </div>
 
 </nav>
-
 
 
 <div class="container my-4">
 
 <div class="row g-4">
 
-
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 
 <div class="col-lg-3">
 
-<div class="card profile-card">
+<div class="card profile-card shadow-sm border-0">
 
-<img
-src="images/prof_pic.png"
-class="card-img-top">
+<img src="images/prof_pic.png"
+     class="card-img-top"
+     alt="Suraj Mandal">
+
 
 <div class="card-body">
 
-<h5>
-
+<h5 class="mb-1">
 Suraj Mandal
-
 </h5>
 
-<p
-class="text-muted">
-
-Ph.D. Scholar (PMRF)
-
-<br>
-
-Department of CSE
-
-<br>
-
+<p class="text-muted small mb-3">
+Ph.D. Scholar (PMRF)<br>
+Department of CSE<br>
 IIT Kanpur
-
 </p>
 
 <hr>
 
-<p>
+<p class="small">
 
 <i class="bi bi-geo-alt"></i>
 
-KD-316
+<strong>Office</strong><br>
 
-<br>
+KD-316<br>
 
-H.R. Kadim Diwan Building
-
-<br>
-
-Dept. of CSE
-
-<br>
+H.R. Kadim Diwan Building<br>
 
 IIT Kanpur
 
@@ -299,57 +146,43 @@ IIT Kanpur
 
 <hr>
 
-<p>
+<p class="small">
 
 <i class="bi bi-envelope"></i>
 
-<br>
+<strong>Email</strong><br>
 
 <a href="mailto:surajm22@iitk.ac.in">
-
 surajm22@iitk.ac.in
-
 </a>
 
 <br>
 
 <a href="mailto:surajmandal@cse.iitk.ac.in">
-
 surajmandal@cse.iitk.ac.in
-
 </a>
 
 </p>
 
 <hr>
 
-<div
-class="d-grid profile-links">
+<div class="d-grid gap-2">
 
-<a
-class="btn btn-outline-dark"
-href="https://github.com/srm1071"
-target="_blank">
+<a class="btn btn-outline-dark btn-sm"
+   href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ"
+   target="_blank">
 
-<i class="bi bi-github"></i>
-
-GitHub
-
-</a>
-
-<a
-class="btn btn-outline-secondary"
-href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ"
-target="_blank">
+<i class="bi bi-mortarboard"></i>
 
 Google Scholar
 
 </a>
 
-<a
-class="btn btn-outline-primary"
-href="https://linkedin.com/in/suraj-mandal-377021128"
-target="_blank">
+<a class="btn btn-outline-primary btn-sm"
+   href="https://www.linkedin.com/in/suraj-mandal-377021128/"
+   target="_blank">
+
+<i class="bi bi-linkedin"></i>
 
 LinkedIn
 
@@ -364,20 +197,11 @@ LinkedIn
 </div>
 
 
-
-<!-- CONTENT -->
+<!-- Main -->
 
 <div class="col-lg-9">
 
-<div class="content-card">
-
-<div class="tab-content">
-
-
-
-<div
-class="tab-pane fade show active"
-id="about">
+<div class="content-section">
 
 <h3 class="section-title">
 
@@ -385,12 +209,11 @@ About
 
 </h3>
 
-
 <p>
 
 I am currently pursuing my Ph.D.
-from the Department of Computer Science & Engineering
-at the
+from the Department of Computer
+Science & Engineering at the
 
 <a href="https://www.iitk.ac.in/"
 target="_blank">
@@ -414,26 +237,23 @@ and Hardware Security.
 
 </p>
 
-
 <p>
 
-During my Ph.D.
-I am working on Hardware implementation
-and acceleration of Post Quantum
-Cryptographic Algorithms.
+During my Ph.D., I work on
+hardware implementation and
+acceleration of Post-Quantum
+Cryptographic algorithms.
 
-I have also worked on design
-and implementation of Physically
-Unclonable Functions (PUF)
-and building security protocols using PUFs.
+My work also includes
+Physically Unclonable Functions (PUFs)
+and hardware security protocols.
 
 </p>
-
 
 <p>
 
 I completed my M.Tech in
-Computer Science and Engineering from
+Computer Science & Engineering from
 
 <a href="https://klyuniv.ac.in/"
 target="_blank">
@@ -442,7 +262,7 @@ University of Kalyani
 
 </a>.
 
-My M.Tech thesis was supervised by
+My thesis was supervised by
 
 <a href="https://www.anirbanm.in/"
 target="_blank">
@@ -462,10 +282,9 @@ Dr. Sujoy Chatterjee
 
 </p>
 
-
 <p>
 
-I worked as JRF at
+I also worked as a JRF at
 
 <a href="https://nitdgp.ac.in/"
 target="_blank">
@@ -474,57 +293,45 @@ NIT Durgapur
 
 </a>
 
-on the project
+on secure lightweight FPGA
+architectures under
 
-"Design of Lightweight and Cost-effective
-secure architecture for authentication
-and FPGA applications"
-
-supervised by
-
-<a
-href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/bibhash-sen"
+<a href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/bibhash-sen"
 target="_blank">
 
 Dr. Bibhash Sen
 
-</a>
+</a>.
 
 </p>
 
+</div>
 
-<div class="news-box">
 
-<h5>
+<div class="content-section">
+
+<h3 class="section-title">
 
 News & Activities
 
-</h5>
+</h3>
 
 <ul>
 
 <li>
-
-New paper accepted at ISVLSI 2026
-
+New paper accepted at ISVLSI 2026.
 </li>
 
 <li>
-
-Work accepted at PhD Forum in DATE 2026
-
+Work accepted at PhD Forum in DATE 2026.
 </li>
 
 <li>
-
-New paper accepted at IEEE Transactions on Consumer Electronics
-
+New paper accepted at IEEE Transactions on Consumer Electronics.
 </li>
 
 <li>
-
-Visiting Research Scholar at NTU Singapore
-
+Visiting Research Scholar at NTU Singapore.
 </li>
 
 </ul>
@@ -533,124 +340,9 @@ Visiting Research Scholar at NTU Singapore
 
 </div>
 
-
-
-<div
-class="tab-pane fade"
-id="publications">
-
-<h3 class="section-title">
-
-Publications
-
-</h3>
-
-<p>
-
-Move your exact
-publication list here
-from publications.html
-
-</p>
-
-</div>
-
-
-
-<div
-class="tab-pane fade"
-id="teaching">
-
-<h3 class="section-title">
-
-Teaching
-
-</h3>
-
-<p>
-
-Paste exact contents of
-experience.html here
-
-</p>
-
-</div>
-
-
-
-<div
-class="tab-pane fade"
-id="awards">
-
-<h3 class="section-title">
-
-Awards & Responsibilities
-
-</h3>
-
-<p>
-
-Paste exact contents from
-responsebilities.html
-
-</p>
-
-</div>
-
-
-
-<div
-class="tab-pane fade"
-id="contact">
-
-<h3 class="section-title">
-
-Contact
-
-</h3>
-
-<p>
-
-KD-316
-
-<br>
-
-Dept. of CSE
-
-<br>
-
-IIT Kanpur
-
-</p>
-
-<p>
-
-surajm22@iitk.ac.in
-
-<br>
-
-surajmandal@cse.iitk.ac.in
-
-</p>
-
-</div>
-
-
 </div>
 
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-</script>
 
 </body>
 
