@@ -1,3 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>
+Suraj Mandal
+</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Inter',sans-serif;
+background:#f4f6f9;
+}
+
+.navbar{
+
+background:white;
+
+box-shadow:
+0 2px 12px rgba(0,0,0,.06);
+
+}
+
+.profile-card{
+
+background:white;
+
+border:none;
+
+border-radius:18px;
+
+box-shadow:
+0 6px 18px rgba(0,0,0,.08);
+
+position:sticky;
+
+top:90px;
+
+overflow:hidden;
+
+}
+
+.content-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:
+0 6px 18px rgba(0,0,0,.06);
+
+min-height:650px;
+
+}
+
+.profile-btn{
+
+margin-bottom:10px;
+
+}
+
+.nav-pills .nav-link{
+
+border-radius:10px;
+
+font-weight:500;
+
+color:#444;
+
+}
+
+.nav-pills .nav-link.active{
+
+background:#0d6efd;
+
+}
+
+.section-title{
+
+font-weight:700;
+
+margin-bottom:25px;
+
+}
+
+ul li{
+
+margin-bottom:10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav
+class="navbar navbar-expand-lg sticky-top">
+
+<div class="container">
+
+<a
+class="navbar-brand fw-bold">
+
+Suraj Mandal
+
+</a>
+
+<ul
+class="nav nav-pills ms-auto">
+
+<li class="nav-item">
+
+<button
+class="nav-link active"
+data-bs-toggle="pill"
+data-bs-target="#about">
+
+About
+
+</button>
+
+</li>
+
+<li>
+
+<a
+class="nav-link"
+href="PDF/suraj_resume.pdf"
+target="_blank">
+
+Resume
+
+</a>
+
+</li>
+
+<li>
+
+<button
+class="nav-link"
+data-bs-toggle="pill"
+data-bs-target="#publications">
+
+Publications
+
+</button>
+
+</li>
+
+<li>
+
+<button
+class="nav-link"
+data-bs-toggle="pill"
+data-bs-target="#teaching">
+
+Teaching
+
+</button>
+
+</li>
+
+<li>
+
+<button
+class="nav-link"
+data-bs-toggle="pill"
+data-bs-target="#awards">
+
+Awards
+
+</button>
+
+</li>
+
+<li>
+
+<button
+class="nav-link"
+data-bs-toggle="pill"
+data-bs-target="#contact">
+
+Contact
+
+</button>
+
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+<div class="container mt-4">
+
+<div class="row g-4">
+
+<!-- LEFT -->
+
+<div class="col-lg-3">
+
+<div class="profile-card">
+
+<img
+src="images/prof_pic.png"
+class="img-fluid">
+
+<div class="p-4">
+
+<h4>
+
+Suraj Mandal
+
+</h4>
+
+<p
+class="text-muted">
+
+Ph.D. Scholar (PMRF)
+
+<br>
+
+Department of CSE
+
+<br>
+
+IIT Kanpur
+
+</p>
+
+<hr>
+
+<p>
+
+<i class="bi bi-geo-alt"></i>
+
+KD-316
+
+<br>
+
+H.R. Kadim Diwan Building
+
+<br>
+
+Dept. of CSE
+
+<br>
+
+IIT Kanpur
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope"></i>
+
+<br>
+
+<a
+href="mailto:surajm22@iitk.ac.in">
+
+surajm22@iitk.ac.in
+
+</a>
+
+<br>
+
+<a
+href="mailto:surajmandal@cse.iitk.ac.in">
+
+surajmandal@cse.iitk.ac.in
+
+</a>
+
+</p>
+
+<div class="d-grid">
+
+<a
+class="btn btn-outline-dark profile-btn"
+target="_blank"
+href="https://github.com/srm1071">
+
+<i class="bi bi-github">
+
+</i>
+
+GitHub
+
+</a>
+
+<a
+class="btn btn-outline-primary profile-btn"
+target="_blank"
+href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ">
+
+Google Scholar
+
+</a>
+
+<a
+class="btn btn-outline-info profile-btn"
+target="_blank"
+href="https://linkedin.com/in/suraj-mandal-377021128">
+
+LinkedIn
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT -->
+
 <div class="col-lg-9">
 
 <div class="content-card">
@@ -12,29 +356,19 @@ class="tab-pane fade show active"
 id="about">
 
 <h3 class="section-title">
+
 About
+
 </h3>
 
 <p>
 
 I am currently pursuing my Ph.D.
 from the Department of Computer Science
-& Engineering at the
-<a href="https://www.iitk.ac.in/"
-target="_blank">
-
-Indian Institute of Technology Kanpur
-
-</a>.
+& Engineering at IIT Kanpur.
 
 I am working under the guidance of
-
-<a href="https://dbroy24.wixsite.com/research"
-target="_blank">
-
-Dr. Debapriya Basu Roy
-
-</a>.
+Dr. Debapriya Basu Roy.
 
 My research area includes
 Hardware Accelerator Design
@@ -44,77 +378,33 @@ and Hardware Security.
 
 <p>
 
-During my Ph.D. I am working on
-Hardware implementation and
-acceleration of Post Quantum
-Cryptographic Algorithms.
+During my Ph.D.
+I am working on Hardware
+implementation and acceleration
+of Post Quantum Cryptographic
+Algorithms.
 
-I have also worked on design and
-implementation of Physically
-Unclonable Functions (PUF)
-and building security protocols
-using PUFs.
+I have also worked on
+Physically Unclonable Functions (PUFs)
+and hardware security protocols.
 
 </p>
 
 <p>
 
-I completed my M.Tech in
-Computer Science and Engineering
-from
-
-<a href="https://klyuniv.ac.in/"
-target="_blank">
-
-University of Kalyani
-
-</a>.
+I completed my M.Tech
+from University of Kalyani.
 
 My M.Tech thesis was supervised by
-
-<a href="https://www.anirbanm.in/"
-target="_blank">
-
-Dr. Anirban Mukhopadhyay
-
-</a>
-
-and
-
-<a href="https://sujoy2611.wixsite.com/sujoy"
-target="_blank">
-
-Dr. Sujoy Chatterjee
-
-</a>.
+Dr. Anirban Mukhopadhyay and
+Dr. Sujoy Chatterjee.
 
 </p>
 
 <p>
 
-I worked as a JRF at
-
-<a href="https://nitdgp.ac.in/"
-target="_blank">
-
-NIT Durgapur
-
-</a>
-
-on the project:
-
-"Design of Lightweight and
-Cost-effective secure architecture
-for authentication and FPGA applications",
-
-supervised by
-
-<a href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/bibhash-sen"
-target="_blank">
-
-Dr. Bibhash Sen
-
-</a>.
+I worked as JRF at
+NIT Durgapur on FPGA security research.
 
 </p>
 
@@ -128,25 +418,24 @@ News & Activities
 <ul>
 
 <li>
-New paper accepted at ISVLSI 2026.
+New paper accepted at ISVLSI 2026
 </li>
 
 <li>
-Work accepted at PhD Forum in DATE 2026.
+Work accepted at DATE 2026 PhD Forum
 </li>
 
 <li>
-New paper accepted at IEEE Transactions on Consumer Electronics.
+New paper accepted at IEEE TCE
 </li>
 
 <li>
-Visiting Research Scholar at NTU Singapore.
+Visiting Research Scholar at NTU Singapore
 </li>
 
 </ul>
 
 </div>
-
 
 
 <!-- PUBLICATIONS -->
@@ -161,17 +450,17 @@ Publications
 
 </h3>
 
-<p>
+<h5>
 
-International Conferences
+Conferences
 
-</p>
+</h5>
 
 <ul>
 
 <li>ISVLSI</li>
 
-<li>ACM QSec (Co-Located with ACM CCS)</li>
+<li>ACM QSec</li>
 
 <li>IEEE SOCC</li>
 
@@ -183,37 +472,23 @@ International Conferences
 
 </ul>
 
-<p>
+<h5>
 
 Journals
 
-</p>
+</h5>
 
 <ul>
 
-<li>
-IEEE TCAS-I
-</li>
+<li>IEEE TCAS-I</li>
 
-<li>
-ACM TODAES
-</li>
+<li>ACM TODAES</li>
 
-<li>
-IEEE Transactions on Consumer Electronics
-</li>
+<li>IEEE TCE</li>
 
 </ul>
 
-<p>
-
-Refer to Google Scholar for
-complete publication details.
-
-</p>
-
 </div>
-
 
 
 <!-- TEACHING -->
@@ -224,23 +499,15 @@ id="teaching">
 
 <h3 class="section-title">
 
-Teaching Experience
+Teaching
 
 </h3>
-
-<h5>
-
-Instructor —
-Chhatrapati Shahu Ji Maharaj University
-
-</h5>
 
 <ul>
 
 <li>
 
-Conceptual Modelling of Hardware Systems Using Verilog:
-A Hands on Design Approach
+Conceptual Modelling of Hardware Systems Using Verilog
 
 </li>
 
@@ -256,87 +523,39 @@ Graph Theory
 
 </li>
 
-</ul>
-
-
-<h5 class="mt-4">
-
-Teaching Assistant —
-IIT Kanpur
-
-</h5>
-
-<ul>
-
 <li>
 
-CS666 —
-Hardware Security for IoT
+CS666 Hardware Security for IoT
 
 </li>
 
 <li>
 
-CS674A —
-Post Quantum Security
+CS674A Post Quantum Security
 
 </li>
 
 <li>
 
-CS220 —
-Computer Organisation
-
-</li>
-
-</ul>
-
-
-<h5 class="mt-4">
-
-Teaching Assistant —
-eMasters IIT Kanpur
-
-</h5>
-
-<ul>
-
-<li>
-
-CS981 —
-Advanced Topics in Cryptography
+CS220 Computer Organisation
 
 </li>
 
 <li>
 
-CS984 —
-Introduction to Hardware Security
+CS981 Advanced Topics in Cryptography
 
 </li>
 
-</ul>
-
-
-<h5 class="mt-4">
-
-Tutorship
-
-</h5>
-
-<ul>
-
 <li>
 
-ESC112M —
-Fundamentals of Computing II
+CS984 Hardware Security
 
 </li>
 
 </ul>
 
 </div>
-
 
 
 <!-- AWARDS -->
@@ -351,74 +570,47 @@ Awards & Responsibilities
 
 </h3>
 
-<h5>
-
-Awards
-
-</h5>
-
 <ul>
 
 <li>
 
-C3i-HUB Fellowship
+Prime Minister Research Fellowship
 
 </li>
 
 <li>
 
-Prime Minister Research Fellowship (PMRF)
-
-</li>
-
-</ul>
-
-
-<h5 class="mt-4">
-
-Responsibilities
-
-</h5>
-
-<ul>
-
-<li>
-
-Reviewer:
-IEEE TCAS-I,
-IEEE TCAS-II
+C3i Hub Fellowship
 
 </li>
 
 <li>
 
-Workshop Organizer:
-SPACE 2024
+Reviewer IEEE TCAS-I
 
 </li>
 
 <li>
 
-Sub Reviewer:
-SPACE,
-CARDIS,
-ASIANHOST,
-COSADE,
-VLSID
+Reviewer IEEE TCAS-II
 
 </li>
 
 <li>
 
-Student Lead:
-CSAW India 2023–2024
+Student Lead CSAW India
+
+</li>
+
+<li>
+
+Workshop Organizer SPACE 2024
 
 </li>
 
 </ul>
 
 </div>
-
 
 
 <!-- CONTACT -->
@@ -435,49 +627,52 @@ Contact
 
 <p>
 
-Email (IITK)
+Office:
+
+KD-316
 
 <br>
 
-<a href="mailto:surajm22@iitk.ac.in">
-
-surajm22@iitk.ac.in
-
-</a>
-
-</p>
-
-<p>
-
-Email (CSE)
+Department of CSE
 
 <br>
 
-<a href="mailto:surajmandal@cse.iitk.ac.in">
-
-surajmandal@cse.iitk.ac.in
-
-</a>
-
-</p>
-
-<p>
-
-Office
-
-<br>
-
-KD-316,
-H.R. Kadim Diwan Building,
-Dept. of CSE,
 IIT Kanpur
 
 </p>
 
+<p>
+
+Email:
+
+<br>
+
+surajm22@iitk.ac.in
+
+<br>
+
+surajmandal@cse.iitk.ac.in
+
+</p>
+
 </div>
+
 
 </div>
 
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+
+</html>
