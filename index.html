@@ -1,348 +1,1074 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Suraj Mandal</title>
+  <meta charset="utf-8">
+  <title>Suraj Mandal | Ph.D. Scholar · IIT Kanpur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of Suraj Mandal, PMRF Ph.D. Scholar at IIT Kanpur. Research in Hardware Security, Post-Quantum Cryptography, and PUF.">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+  <style>
+    /* ── RESET & TOKENS ───────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- Bootstrap Icons -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        rel="stylesheet">
+    :root {
+      /* ── DARK PROFESSIONAL THEME ── */
+      --navy:        #e2e8f0;     /* used for headings → now near-white */
+      --navy-mid:    #cbd5e1;
+      --blue:        #38bdf8;     /* electric sky-blue accent */
+      --blue-light:  #7dd3fc;
+      --blue-pale:   rgba(56,189,248,0.08);
+      --blue-border: rgba(56,189,248,0.2);
 
-    <!-- Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+      --text:        #f1f5f9;
+      --text-body:   #cbd5e1;
+      --text-muted:  #94a3b8;
+      --text-faint:  #64748b;
 
-    <link href="styles/main.css" rel="stylesheet">
+      --bg:          #1e2433;     /* card background — dark slate */
+      --bg-off:      #161b27;     /* page background — deepest */
+      --bg-section:  #252d3d;     /* subtle stripe / code badge */
+      --border:      rgba(255,255,255,0.08);
+      --border-mid:  rgba(255,255,255,0.14);
 
+      --radius-sm:   4px;
+      --radius:      8px;
+      --radius-lg:   12px;
+
+      --sidebar-w:   270px;
+      --nav-h:       58px;
+
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      --ease: 0.18s ease;
+    }
+
+    html  { scroll-behavior: smooth; font-size: 15px; }
+    body  { font-family: var(--font); background: var(--bg-off); color: var(--text-body); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a     { color: var(--blue); text-decoration: none; transition: color var(--ease); }
+    a:hover { color: var(--blue-light); text-decoration: underline; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg-off); }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+
+    /* ── TOPBAR ───────────────────────────────────────── */
+    #topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      background: rgba(22,27,39,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar-inner {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .topbar-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .topbar-brand-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-brand-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .topbar-nav {
+      display: flex;
+      list-style: none;
+      gap: 2px;
+      align-items: center;
+    }
+
+    .topbar-nav a {
+      display: block;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none !important;
+      transition: all var(--ease);
+      white-space: nowrap;
+    }
+
+    .topbar-nav a:hover,
+    .topbar-nav a.active {
+      color: var(--blue);
+      background: var(--blue-pale);
+    }
+
+    .topbar-nav a.active {
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .nav-resume-btn {
+      padding: 0.35rem 1rem !important;
+      background: var(--blue) !important;
+      color: #0f172a !important;
+      border-radius: var(--radius-sm) !important;
+      font-weight: 600 !important;
+    }
+
+    .nav-resume-btn:hover {
+      background: var(--blue-light) !important;
+      color: #0f172a !important;
+    }
+
+    /* Mobile menu toggle */
+    .mob-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.35rem 0.6rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    /* ── PAGE LAYOUT ──────────────────────────────────── */
+    .page-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 2rem) 2rem 4rem;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ──────────────────────────────────────── */
+    .sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 1.25rem);
+    }
+
+    .profile-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-body {
+      padding: 1.2rem;
+    }
+
+    .profile-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+
+    .profile-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    .pmrf-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.71rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 3px;
+      padding: 3px 9px;
+      margin-bottom: 1.1rem;
+    }
+
+    .profile-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1rem 0;
+    }
+
+    .profile-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .profile-meta-row {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      font-size: 0.79rem;
+    }
+
+    .profile-meta-row i {
+      color: var(--blue-light);
+      font-size: 0.85rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .profile-meta-row strong {
+      display: block;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 1px;
+    }
+
+    .profile-meta-row a {
+      color: var(--text-muted);
+      display: block;
+      line-height: 1.5;
+    }
+
+    .profile-meta-row a:hover { color: var(--blue); text-decoration: none; }
+
+    .profile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .profile-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.45rem 0.85rem;
+      background: var(--bg-off);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted) !important;
+      text-decoration: none !important;
+      transition: all var(--ease);
+    }
+
+    .profile-link:hover {
+      background: var(--blue-pale);
+      border-color: var(--blue-border);
+      color: var(--blue) !important;
+    }
+
+    .profile-link i { font-size: 0.9rem; }
+
+    /* ── MAIN CONTENT ─────────────────────────────────── */
+    .main-col {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* ── SECTION CARD ─────────────────────────────────── */
+    .sec-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 2rem;
+      scroll-margin-top: calc(var(--nav-h) + 1rem);
+    }
+
+    .sec-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+
+    .sec-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      border-bottom: 2px solid var(--bg-section);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── TAGS ─────────────────────────────────────────── */
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 1rem 0;
+    }
+
+    .tag {
+      font-size: 0.77rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 3px;
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      color: var(--text-body);
+    }
+
+    /* ── NEWS ITEMS ───────────────────────────────────── */
+    .news-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: var(--text-body);
+    }
+
+    .news-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-row:first-child { padding-top: 0; }
+
+    .news-tag {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-top: 3px;
+      white-space: nowrap;
+    }
+
+    .nt-journal { background: rgba(34,197,94,0.12);  color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+    .nt-conf    { background: rgba(56,189,248,0.12); color: #38bdf8; border: 1px solid rgba(56,189,248,0.25); }
+    .nt-forum   { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.25); }
+
+    /* ── PUB / ENTRY ROWS ─────────────────────────────── */
+    .sub-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 3px solid var(--blue);
+      padding-left: 0.7rem;
+      margin: 1.5rem 0 0.85rem;
+    }
+
+    .sub-label:first-of-type { margin-top: 0; }
+
+    .entry-row {
+      display: flex;
+      gap: 1.1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .entry-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .entry-row:first-of-type { padding-top: 0; }
+
+    .entry-code {
+      flex-shrink: 0;
+      width: 68px;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-section);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-sm);
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.3;
+      padding: 4px;
+    }
+
+    .entry-body h6 {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+    }
+
+    .entry-body .entry-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .entry-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--blue);
+      margin-top: 0.3rem;
+      text-decoration: none !important;
+    }
+
+    .entry-link:hover { color: var(--navy); }
+
+    /* ── CONTACT TILES ────────────────────────────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-tile {
+      display: block;
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      text-decoration: none !important;
+      transition: all var(--ease);
+    }
+
+    .contact-tile:hover {
+      background: rgba(56,189,248,0.08);
+      border-color: rgba(56,189,248,0.3);
+    }
+
+    .contact-tile-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-faint);
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-tile-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer {
+      background: #0d1117;
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    footer strong { color: #fff; }
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 860px) {
+      .page-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .profile-photo {
+        width: 150px;
+        aspect-ratio: unset;
+        border-right: 1px solid var(--border);
+        border-bottom: none;
+        border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+        flex-shrink: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root { --nav-h: 56px; }
+
+      .topbar-nav { display: none; }
+      .mob-toggle { display: flex; align-items: center; }
+
+      .topbar-nav.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-h);
+        left: 0; right: 0; bottom: 0;
+        background: rgba(22,27,39,0.98);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.1rem;
+        z-index: 150;
+      }
+
+      .profile-card { flex-direction: column; }
+      .profile-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      }
+
+      .page-wrap { padding: calc(var(--nav-h) + 1rem) 1rem 3rem; }
+      .sec-card { padding: 1.25rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav class="navbar navbar-expand-lg">
-
-    <div class="container">
-
-        <a class="navbar-brand"
-           href="index.html">
-
-            Suraj Mandal
-
-        </a>
-
-        <span class="navbar-text d-none d-lg-inline">
-
-            Ph.D. Scholar (PMRF) · IIT Kanpur
-
-        </span>
-
-        <div class="collapse navbar-collapse">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link active"
-                       href="index.html">
-                        About
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="PDF/suraj_resume.pdf">
-                        Resume
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="publications.html">
-                        Publications
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="experience.html">
-                        Teaching
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="responsebilities.html">
-                        Awards & Responsibilities
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
+<!-- ── TOPBAR ─────────────────────────────────────────────── -->
+<header id="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">
+      <span class="topbar-brand-name">Suraj Mandal</span>
+      <span class="topbar-brand-sub">Ph.D. Scholar (PMRF) · IIT Kanpur</span>
     </div>
 
-</nav>
+    <ul class="topbar-nav" id="navLinks">
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="PDF/suraj_resume.pdf" target="_blank" class="nav-resume-btn">
+        <i class="bi bi-file-earmark-pdf me-1"></i> Resume
+      </a></li>
+    </ul>
 
+    <button class="mob-toggle" id="mobToggle" aria-label="Menu">
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+</header>
 
-<div class="container my-4">
+<!-- ── PAGE LAYOUT ────────────────────────────────────────── -->
+<div class="page-wrap">
 
-<div class="row g-4">
+  <!-- ─ SIDEBAR ─────────────────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="profile-card">
+      <img src="images/prof_pic.png" alt="Suraj Mandal" class="profile-photo">
+      <div class="profile-body">
+        <div class="profile-name">Suraj Mandal</div>
+        <div class="profile-title">
+          Ph.D. Scholar<br>
+          Dept. of Computer Science &amp; Engineering<br>
+          IIT Kanpur
+        </div>
+        <div class="pmrf-badge">
+          <i class="bi bi-award-fill"></i> PMRF Fellow
+        </div>
 
-<!-- Sidebar -->
+        <hr class="profile-divider">
 
-<div class="col-lg-3">
+        <div class="profile-meta">
+          <div class="profile-meta-row">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Office</strong>
+              KD-316, H.R. Kadim Diwan Building, IIT Kanpur
+            </div>
+          </div>
+          <div class="profile-meta-row">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:surajm22@iitk.ac.in">surajm22@iitk.ac.in</a>
+              <a href="mailto:surajmandal@cse.iitk.ac.in">surajmandal@cse.iitk.ac.in</a>
+            </div>
+          </div>
+        </div>
 
-<div class="card profile-card shadow-sm border-0">
+        <hr class="profile-divider">
 
-<img src="images/prof_pic.png"
-     class="card-img-top"
-     alt="Suraj Mandal">
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ" target="_blank" class="profile-link">
+            <i class="bi bi-mortarboard-fill"></i> Google Scholar
+          </a>
+          <a href="https://github.com/srm1071" target="_blank" class="profile-link">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/suraj-mandal-377021128/" target="_blank" class="profile-link">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
 
+  <!-- ─ MAIN COLUMN ─────────────────────────────────────── -->
+  <main class="main-col">
 
-<div class="card-body">
+    <!-- ABOUT -->
+    <section class="sec-card" id="about">
+      <div class="sec-label">About Me</div>
+      <h2 class="sec-title">Biography</h2>
 
-<h5 class="mb-1">
-Suraj Mandal
-</h5>
+      <p>I am a Ph.D. scholar in the <a href="https://www.cse.iitk.ac.in/" target="_blank">Department of Computer Science &amp; Engineering</a> at the <a href="https://www.iitk.ac.in/" target="_blank">Indian Institute of Technology Kanpur</a>, supervised by <a href="https://dbroy24.wixsite.com/research" target="_blank">Dr. Debapriya Basu Roy</a>. I am a recipient of the <strong>Prime Minister's Research Fellowship (PMRF)</strong>, one of India's most prestigious doctoral fellowships.</p>
 
-<p class="text-muted small mb-3">
-Ph.D. Scholar (PMRF)<br>
-Department of CSE<br>
-IIT Kanpur
-</p>
+      <p style="margin-top:0.9rem;">My research lies at the intersection of <strong>Hardware Accelerator Design</strong> and <strong>Hardware Security</strong>. I design efficient and resilient hardware implementations of <em>Post-Quantum Cryptographic (PQC) algorithms</em> and <em>Physically Unclonable Functions (PUFs)</em>, and develop security protocols for embedded and FPGA-based platforms.</p>
 
-<hr>
+      <div class="tag-row">
+        <span class="tag">Hardware Accelerator Design</span>
+        <span class="tag">Post-Quantum Cryptography</span>
+        <span class="tag">Physically Unclonable Functions (PUFs)</span>
+        <span class="tag">FPGA Architecture</span>
+        <span class="tag">Hardware Security</span>
+      </div>
 
-<p class="small">
+      <hr style="border-color: var(--border); margin: 1.25rem 0;">
 
-<i class="bi bi-geo-alt"></i>
+      <p style="font-size:0.88rem;"><strong>Education:</strong> I completed my M.Tech in Computer Science &amp; Engineering from the <a href="https://klyuniv.ac.in/" target="_blank">University of Kalyani</a>, supervised by <a href="https://www.anirbanm.in/" target="_blank">Dr. Anirban Mukhopadhyay</a> and <a href="https://sujoy2611.wixsite.com/sujoy" target="_blank">Dr. Sujoy Chatterjee</a>. Prior to IIT Kanpur, I served as a Junior Research Fellow (JRF) at <a href="https://nitdgp.ac.in/" target="_blank">NIT Durgapur</a> under <a href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/bibhash-sen" target="_blank">Dr. Bibhash Sen</a> on secure lightweight FPGA architectures for PUF.</p>
+    </section>
 
-<strong>Office</strong><br>
+    <!-- NEWS -->
+    <section class="sec-card" id="news">
+      <div class="sec-label">Updates</div>
+      <h2 class="sec-title">News &amp; Activities</h2>
 
-KD-316<br>
+      <div class="news-row">
+        <span class="news-tag nt-journal">Journal</span>
+        <span>New paper accepted at <strong>ACM Transactions on Embedded Computing Systems (TECS)</strong>.</span>
+      </div>
+      <div class="news-row">
+        <span class="news-tag nt-conf">Conf</span>
+        <span>New paper accepted at <strong>International Conference on Field-Programmable Logic and Applications (FPL 2026)</strong>.</span>
+      </div>
+      <div class="news-row">
+        <span class="news-tag nt-conf">Conf</span>
+        <span>New paper accepted at <strong>IEEE Computer Society Annual Symposium on VLSI (ISVLSI 2026)</strong>.</span>
+      </div>
+      <div class="news-row">
+        <span class="news-tag nt-forum">Forum</span>
+        <span>Research accepted at the <strong>PhD Forum, Design Automation &amp; Test in Europe (DATE 2026)</strong>.</span>
+      </div>
+    </section>
 
-H.R. Kadim Diwan Building<br>
+    <!-- PUBLICATIONS -->
+    <section class="sec-card" id="publications">
+      <div class="sec-label">Peer-reviewed Work</div>
+      <h2 class="sec-title">Publications</h2>
 
-IIT Kanpur
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+        For full citations and paper PDFs, see my <a href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ&hl=en" target="_blank" style="font-weight:600;">Google Scholar profile</a>.
+      </p>
 
-</p>
+      <div class="sub-label">International Conferences</div>
 
-<hr>
+      <div class="entry-row">
+        <div class="entry-code">FPL</div>
+        <div class="entry-body">
+          <h6>International Conference on Field-Programmable Logic and Applications</h6>
+          <div class="entry-sub">FPL — 2026</div>
+          <a href="https://2026.fpl.org/" target="_blank" class="entry-link">Website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<p class="small">
+      <div class="entry-row">
+        <div class="entry-code">ISVLSI</div>
+        <div class="entry-body">
+          <h6>IEEE Computer Society Annual Symposium on VLSI</h6>
+          <div class="entry-sub">ISVLSI — 2026</div>
+          <a href="https://ieee-isvlsi.github.io/ISVLSI_2026_Website/#" target="_blank" class="entry-link">Website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<i class="bi bi-envelope"></i>
+      <div class="entry-row">
+        <div class="entry-code">ACM QSec</div>
+        <div class="entry-body">
+          <h6>ACM Workshop on Quantum-Safe Cryptography</h6>
+          <div class="entry-sub">Co-located with ACM CCS</div>
+          <a href="https://acm-qsec.com/" target="_blank" class="entry-link">Website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<strong>Email</strong><br>
+      <div class="entry-row">
+        <div class="entry-code">SOCC</div>
+        <div class="entry-body">
+          <h6>IEEE International System-on-Chip Conference</h6>
+          <div class="entry-sub">SOCC — IEEE</div>
+          <a href="https://ieeexplore.ieee.org/xpl/conhome/9083732/proceeding" target="_blank" class="entry-link">IEEE Xplore <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<a href="mailto:surajm22@iitk.ac.in">
-surajm22@iitk.ac.in
-</a>
+      <div class="entry-row">
+        <div class="entry-code">ASIANHOST</div>
+        <div class="entry-body">
+          <h6>Asian Hardware Oriented Security and Trust Symposium</h6>
+          <div class="entry-sub">ASIANHOST — IEEE</div>
+          <a href="https://ieeexplore.ieee.org/xpl/conhome/10409268/proceeding" target="_blank" class="entry-link">IEEE Xplore <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<br>
+      <div class="entry-row">
+        <div class="entry-code">GLSVLSI</div>
+        <div class="entry-body">
+          <h6>ACM Great Lakes Symposium on VLSI</h6>
+          <div class="entry-sub">GLSVLSI — ACM</div>
+          <a href="https://dl.acm.org/doi/proceedings/10.1145/3649476" target="_blank" class="entry-link">ACM DL <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<a href="mailto:surajmandal@cse.iitk.ac.in">
-surajmandal@cse.iitk.ac.in
-</a>
+      <div class="entry-row">
+        <div class="entry-code">VLSID</div>
+        <div class="entry-body">
+          <h6>International Conference on VLSI Design and Embedded Systems</h6>
+          <div class="entry-sub">VLSID — IEEE</div>
+          <a href="https://ieeexplore.ieee.org/xpl/conhome/10483275/proceeding" target="_blank" class="entry-link">IEEE Xplore <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-</p>
+      <div class="sub-label">International Journals</div>
 
-<hr>
+      <div class="entry-row">
+        <div class="entry-code">ACM TECS</div>
+        <div class="entry-body">
+          <h6>ACM Transactions on Embedded Computing Systems</h6>
+          <div class="entry-sub">ACM TECS</div>
+          <a href="https://dl.acm.org/journal/tecs" target="_blank" class="entry-link">ACM DL <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<div class="d-grid gap-2">
+      <div class="entry-row">
+        <div class="entry-code">IEEE TCAS-I</div>
+        <div class="entry-body">
+          <h6>IEEE Transactions on Circuits and Systems I: Regular Papers</h6>
+          <div class="entry-sub">IEEE TCAS-I</div>
+          <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919" target="_blank" class="entry-link">IEEE Xplore <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<a class="btn btn-outline-dark btn-sm"
-   href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ"
-   target="_blank">
+      <div class="entry-row">
+        <div class="entry-code">ACM TODAES</div>
+        <div class="entry-body">
+          <h6>ACM Transactions on Design Automation of Electronic Systems</h6>
+          <div class="entry-sub">ACM TODAES</div>
+          <a href="https://dl.acm.org/journal/TODAES" target="_blank" class="entry-link">ACM DL <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-<i class="bi bi-mortarboard"></i>
+      <div class="entry-row">
+        <div class="entry-code">IEEE TCE</div>
+        <div class="entry-body">
+          <h6>IEEE Transactions on Consumer Electronics</h6>
+          <div class="entry-sub">IEEE TCE</div>
+          <a href="https://ctsoc.ieee.org/publications/ieee-transactions-on-consumer-electronics.html" target="_blank" class="entry-link">IEEE Xplore <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
 
-Google Scholar
+    <!-- TEACHING -->
+    <section class="sec-card" id="teaching">
+      <div class="sec-label">Courses &amp; Mentorship</div>
+      <h2 class="sec-title">Teaching Experience</h2>
 
-</a>
+      <div class="sub-label">Instructor — CSJM University, Kanpur</div>
 
-<a class="btn btn-outline-primary btn-sm"
-   href="https://www.linkedin.com/in/suraj-mandal-377021128/"
-   target="_blank">
+      <div class="entry-row">
+        <div class="entry-code">Verilog</div>
+        <div class="entry-body">
+          <h6>Conceptual Modelling of Hardware Systems Using Verilog: A Hands-on Design Approach</h6>
+          <div class="entry-sub">B.Tech · CSJM University</div>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">CS-S511</div>
+        <div class="entry-body">
+          <h6>Advanced DBMS</h6>
+          <div class="entry-sub">B.Tech · CSJM University</div>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">MTH-S503</div>
+        <div class="entry-body">
+          <h6>Graph Theory</h6>
+          <div class="entry-sub">B.Tech · CSJM University</div>
+        </div>
+      </div>
 
-<i class="bi bi-linkedin"></i>
+      <div class="sub-label">Teaching Assistant — IIT Kanpur</div>
 
-LinkedIn
+      <div class="entry-row">
+        <div class="entry-code">CS666</div>
+        <div class="entry-body">
+          <h6>Hardware Security for IoT</h6>
+          <div class="entry-sub">PG · Dept. of CSE, IIT Kanpur</div>
+          <a href="https://www.cse.iitk.ac.in/pages/CS666.html" target="_blank" class="entry-link">Course page <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">CS674A</div>
+        <div class="entry-body">
+          <h6>Post Quantum Security</h6>
+          <div class="entry-sub">PG · Dept. of CSE, IIT Kanpur</div>
+          <a href="https://www.cse.iitk.ac.in/pages/CS674A.html" target="_blank" class="entry-link">Course page <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">CS220</div>
+        <div class="entry-body">
+          <h6>Computer Organisation</h6>
+          <div class="entry-sub">UG · Dept. of CSE, IIT Kanpur</div>
+          <a href="https://www.cse.iitk.ac.in/pages/CS220.html" target="_blank" class="entry-link">Course page <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
-</a>
+      <div class="sub-label">Teaching Assistant — eMasters in Cyber Security (IIT Kanpur)</div>
 
+      <div class="entry-row">
+        <div class="entry-code">CS981</div>
+        <div class="entry-body">
+          <h6>Advanced Topics in Cryptography</h6>
+          <div class="entry-sub">eMasters · IIT Kanpur Online</div>
+          <a href="https://emasters.iitk.ac.in/" target="_blank" class="entry-link">Program website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">CS984</div>
+        <div class="entry-body">
+          <h6>Introduction to Hardware Security</h6>
+          <div class="entry-sub">eMasters · IIT Kanpur Online</div>
+          <a href="https://emasters.iitk.ac.in/" target="_blank" class="entry-link">Program website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="sub-label">Tutorship</div>
+
+      <div class="entry-row">
+        <div class="entry-code">ESC112M</div>
+        <div class="entry-body">
+          <h6>Fundamentals of Computing II</h6>
+          <div class="entry-sub">UG · IIT Kanpur · Semester 2023-I</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="sec-card" id="awards">
+      <div class="sec-label">Recognition &amp; Service</div>
+      <h2 class="sec-title">Awards &amp; Responsibilities</h2>
+
+      <div class="sub-label">Awards &amp; Fellowships</div>
+
+      <div class="entry-row">
+        <div class="entry-code">PMRF 2023</div>
+        <div class="entry-body">
+          <h6>Prime Minister's Research Fellowship (PMRF)</h6>
+          <div class="entry-sub">India's most prestigious doctoral fellowship · Awarded 2023</div>
+          <a href="https://www.iitk.ac.in/doaa/pmrf/" target="_blank" class="entry-link">Details <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="entry-code">ANRF Grant</div>
+        <div class="entry-body">
+          <h6>ANRF International Travel Grant</h6>
+          <div class="entry-sub">Anusandhan National Research Foundation · For DATE 2026 PhD Forum</div>
+          <a href="https://www.anrfonline.in/ANRF/its" target="_blank" class="entry-link">Grant portal <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="entry-code">Poster Award</div>
+        <div class="entry-body">
+          <h6>Second Best Poster Award</h6>
+          <div class="entry-sub">ISEA-ISAP Conference</div>
+          <a href="https://isea-isap2026.iitm.ac.in/" target="_blank" class="entry-link">Conference website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="entry-code">C3iHub Fellow</div>
+        <div class="entry-body">
+          <h6>C3i-HUB Fellowship</h6>
+          <div class="entry-sub">Interdisciplinary Centre for Cyber Security, IIT Kanpur</div>
+          <a href="https://c3ihub.org/" target="_blank" class="entry-link">C3iHub website <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="sub-label">Professional Responsibilities</div>
+
+      <div class="entry-row">
+        <div class="entry-code">Reviewer</div>
+        <div class="entry-body">
+          <h6>Journal Reviewer</h6>
+          <div class="entry-sub">IEEE TCAS-I (Transactions on Circuits and Systems I)</div>
+          <div class="entry-sub">IEEE TCAS-II (Express Briefs)</div>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="entry-code">Student Lead</div>
+        <div class="entry-body">
+          <h6>Student Lead — CSAW India 2023–2024</h6>
+          <div class="entry-sub">Cyber Security Awareness Week · C3i Hub, IIT Kanpur &amp; NYU Tandon</div>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="entry-code">Workshop Org.</div>
+        <div class="entry-body">
+          <h6>Workshop Organizer — SPACE 2024</h6>
+          <div class="entry-sub">Security, Privacy, and Applied Cryptography Engineering</div>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="entry-code">Sub-Reviewer</div>
+        <div class="entry-body">
+          <h6>Sub-Reviewer — Premier Security Conferences</h6>
+          <div class="entry-sub">SPACE · CARDIS · ASIANHOST · COSADE · VLSID</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec-card" id="contact">
+      <div class="sec-label">Get in Touch</div>
+      <h2 class="sec-title">Contact</h2>
+
+      <p style="font-size:0.875rem; color:var(--text-muted); margin-bottom:1.25rem;">
+        For research collaborations, academic inquiries, or student mentorship, please reach out via email.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:surajm22@iitk.ac.in" class="contact-tile">
+          <div class="contact-tile-label"><i class="bi bi-envelope me-1"></i> Institutional Email</div>
+          <div class="contact-tile-value">surajm22@iitk.ac.in</div>
+        </a>
+        <a href="mailto:surajmandal@cse.iitk.ac.in" class="contact-tile">
+          <div class="contact-tile-label"><i class="bi bi-building me-1"></i> Departmental Email</div>
+          <div class="contact-tile-value">surajmandal@cse.iitk.ac.in</div>
+        </a>
+      </div>
+
+      <div class="sub-label">Office Address</div>
+
+      <div class="entry-row" style="border:none; padding-top:0;">
+        <div class="entry-code">Addr</div>
+        <div class="entry-body">
+          <h6>Room KD-316, H.R. Kadim Diwan Building</h6>
+          <div class="entry-sub">Department of Computer Science &amp; Engineering</div>
+          <div class="entry-sub">Indian Institute of Technology Kanpur, UP – 208016, India</div>
+          <a href="https://www.google.com/maps/search/IIT+Kanpur+Kanpur+208016" target="_blank" class="entry-link" style="margin-top:0.4rem;">
+            <i class="bi bi-geo-alt-fill" style="color:#ef4444;"></i> Open in Google Maps <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="sub-label">Academic Profiles</div>
+
+      <div class="entry-row">
+        <div class="entry-code">Scholar</div>
+        <div class="entry-body">
+          <h6>Google Scholar</h6>
+          <div class="entry-sub">Full publication list and citations</div>
+          <a href="https://scholar.google.com/citations?user=Bk2K3GIAAAAJ" target="_blank" class="entry-link">View profile <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">GitHub</div>
+        <div class="entry-body">
+          <h6>GitHub</h6>
+          <div class="entry-sub">Code repositories for hardware security research</div>
+          <a href="https://github.com/srm1071" target="_blank" class="entry-link">github.com/srm1071 <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="entry-row">
+        <div class="entry-code">LinkedIn</div>
+        <div class="entry-body">
+          <h6>LinkedIn</h6>
+          <div class="entry-sub">Professional profile</div>
+          <a href="https://www.linkedin.com/in/suraj-mandal-377021128/" target="_blank" class="entry-link">View profile <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </div>
 
-</div>
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <strong>Suraj Mandal</strong> &nbsp;·&nbsp; Department of Computer Science &amp; Engineering, IIT Kanpur &nbsp;·&nbsp; Kalyanpur, Kanpur – 208016, India
+</footer>
 
-</div>
+<script>
+  /* Mobile nav toggle */
+  const mobToggle = document.getElementById('mobToggle');
+  const navLinks  = document.getElementById('navLinks');
+  mobToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
 
-</div>
+  /* Active nav highlight on scroll */
+  const sections = document.querySelectorAll('.sec-card[id]');
+  const navAs    = document.querySelectorAll('.topbar-nav a[href^="#"]');
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navAs.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
 
-<!-- Main -->
-
-<div class="col-lg-9">
-
-<div class="content-section">
-
-<h3 class="section-title">
-
-About
-
-</h3>
-
-<p>
-
-I am currently pursuing my Ph.D.
-from the Department of Computer
-Science & Engineering at the
-
-<a href="https://www.iitk.ac.in/"
-target="_blank">
-
-Indian Institute of Technology Kanpur
-
-</a>.
-
-I am working under the guidance of
-
-<a href="https://dbroy24.wixsite.com/research"
-target="_blank">
-
-Dr. Debapriya Basu Roy
-
-</a>.
-
-My research area includes
-Hardware Accelerator Design
-and Hardware Security.
-
-</p>
-
-<p>
-
-During my Ph.D., I work on
-hardware implementation and
-acceleration of Post-Quantum
-Cryptographic algorithms.
-
-My work also includes
-Physically Unclonable Functions (PUFs)
-and hardware security protocols.
-
-</p>
-
-<p>
-
-I completed my M.Tech in
-Computer Science & Engineering from
-
-<a href="https://klyuniv.ac.in/"
-target="_blank">
-
-University of Kalyani
-
-</a>.
-
-My thesis was supervised by
-
-<a href="https://www.anirbanm.in/"
-target="_blank">
-
-Dr. Anirban Mukhopadhyay
-
-</a>
-
-and
-
-<a href="https://sujoy2611.wixsite.com/sujoy"
-target="_blank">
-
-Dr. Sujoy Chatterjee
-
-</a>.
-
-</p>
-
-<p>
-
-I also worked as a JRF at
-
-<a href="https://nitdgp.ac.in/"
-target="_blank">
-
-NIT Durgapur
-
-</a>
-
-on secure lightweight FPGA
-architectures of PUF under
-
-<a href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/bibhash-sen"
-target="_blank">
-
-Dr. Bibhash Sen
-
-</a>.
-
-</p>
-
-</div>
-
-
-<div class="content-section">
-
-<h3 class="section-title">
-
-News & Activities
-
-</h3>
-
-<ul>
-<li>
-New paper accepted at ACM TECS (Transactions on Embedded Computing Systems).
-</li>
-    
-<li>
-New paper accepted at FPL 2026.
-</li>
-
-<li>
-New paper accepted at ISVLSI 2026.
-</li>
-
-<li>
-Work accepted at PhD Forum in DATE 2026.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+  sections.forEach(sec => observer.observe(sec));
+</script>
 </body>
-
 </html>
